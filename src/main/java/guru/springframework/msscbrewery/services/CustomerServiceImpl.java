@@ -25,7 +25,6 @@ public class CustomerServiceImpl implements CustomerService {
     public CustomerDto saveNewCustomer(CustomerDto customerDto) {
         return CustomerDto.builder()
                 .id(UUID.randomUUID())
-                .name(customerDto.getName())
                 .build();
     }
 

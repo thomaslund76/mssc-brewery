@@ -35,7 +35,7 @@ public class CustomerController {
         CustomerDto savedDto = customerService.saveNewCustomer(customerDto);
         HttpHeaders headers = new HttpHeaders();
         //todo add hostname at url
-        headers.add("Location", "/api/v1/customer/" + savedDto);
+        headers.add("Location", "/api/v1/customer/" + savedDto.getId().toString());
         return new ResponseEntity(headers, HttpStatus.CREATED);
     }
 
